@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- - Cho 1 mảng trống , nhập n là số phần tử của mảng 
+    - chạy vòng for qua mảng và push b là lần lược theo các index
+    - Ta được 1 mảng gồm n phần tử và loop qua mảng đã đk tạo cho max khởi tạo bằng arr[0]
+    - Nếu max < arr[j] => max = arr[j];
+    - Ta tính sum của mang rồi chia cho độ dài mảng là ra trung bình -->
+    <script>
+        var n , arr , max  ,  sum , b , tb ;
+        n = parseInt(prompt("Nhập vào số phần tử của mảng :"));
+        arr = [];  
+        sum = 0 ;
+        for(var i = 0 ; i < n ; i++){
+            b = parseInt(prompt("Nhập phần tử tại index "+i))
+            arr.push(b);
+        }
+        console.log(arr);
+        max = arr[0];
+        for(var j = 0; j < arr.length; j++){
+            sum += arr[j];
+            if(max < arr[j]){
+                max = arr[j];
+            }          
+        }
+        tb  = sum / (arr.length);
+       alert(`Gía trị lớn max của phần tử là ${max} và trung bình của các phần tử trong mảng là ${tb}`)
+        
+    </script>
+</body>
+</html>
